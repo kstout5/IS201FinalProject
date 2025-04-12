@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Where Should I Go?</title>
+  <style>
+    body {
+      font-family: 'Arial Rounded MT Bold', sans-serif;
+      background: #fff0f5;
+      color: #333;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #d31f7c;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .question {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 700px;
+      text-align: left;
+    }
+
+    .question p {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .question label {
+      display: block;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      background: #ff80ab;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #ff5c8a;
+    }
+
+    #result {
+      margin-top: 40px;
+      font-size: 1.4rem;
+      color: #d31f7c;
+      background: white;
+      padding: 20px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    nav {
+      margin-bottom: 40px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #d31f7c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+    #retryBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ffd1dc;
+  color: #830263;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+#retryBtn:hover {
+  background-color: #ff8fa3;
+}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="scratch.html">🌴 Best Beaches</a>
+    <a href="beachapp.html">🧭 Where Should I Go?</a>
+  </nav>
+
+  <h1>🧭 Where Should I Go?</h1>
+  <p>Answer the questions below to find your dream beach match!</p>
+
+  <form id="quizForm">
+    <div class="question">
+      <p>1. What's your ideal vacation vibe?</p>
+      <label><input type="radio" name="q1" value="calm"> ☕ Chill & cozy</label>
+      <label><input type="radio" name="q1" value="adventure"> 🧗‍♀️ Adventurous</label>
+      <label><input type="radio" name="q1" value="glam"> 🛍️ Glamorous</label>
+      <label><input type="radio" name="q1" value="fun"> 🎉 Social & fun</label>
+    </div>
+
+    <div class="question">
+      <p>2. Go-to beach outfit?</p>
+      <label><input type="radio" name="q2" value="glam"> 👒 Flowy sundress</label>
+      <label><input type="radio" name="q2" value="adventure"> 🩳 Athletic wear</label>
+      <label><input type="radio" name="q2" value="glam"> 👙 Trendy swimsuit</label>
+      <label><input type="radio" name="q2" value="fun"> 🧢 Graphic tee</label>
+    </div>
+
+    <div class="question">
+      <p>3. What are you sipping?</p>
+      <label><input type="radio" name="q3" value="calm"> 🧊 Water</label>
+      <label><input type="radio" name="q3" value="glam"> 🍹 Slushie</label>
+      <label><input type="radio" name="q3" value="adventure"> 🧃 Smoothie</label>
+      <label><input type="radio" name="q3" value="fun"> 🥤 Fountain Soda</label>
+    </div>
+
+    <div class="question">
+      <p>4. What’s a must-have beach activity?</p>
+      <label><input type="radio" name="q4" value="adventure"> 🏄‍♀️ Surfing</label>
+      <label><input type="radio" name="q4" value="glam"> 📸 Taking cute pics</label>
+      <label><input type="radio" name="q4" value="calm"> 🏖️ Sunbathing</label>
+      <label><input type="radio" name="q4" value="fun"> 🧺 Beach picnic</label>
+    </div>
+
+    <div class="question">
+      <p>5. Favorite time of day at the beach?</p>
+      <label><input type="radio" name="q5" value="calm"> 🌅 Sunrise</label>
+      <label><input type="radio" name="q5" value="adventure"> ☀️ Midday</label>
+      <label><input type="radio" name="q5" value="glam"> 🌇 Golden hour</label>
+      <label><input type="radio" name="q5" value="fun"> 🌃 Bonfire night</label>
+    </div>
+
+    <div class="question">
+      <p>6. Favorite beach soundtrack?</p>
+      <label><input type="radio" name="q6" value="calm"> 🎶 Acoustic guitar</label>
+      <label><input type="radio" name="q6" value="glam"> 🏖️ Tropical vibes</label>
+      <label><input type="radio" name="q6" value="fun"> 🎤 Pop hits</label>
+      <label><input type="radio" name="q6" value="adventure"> 🕺 EDM</label>
+    </div>
+
+    <div class="question">
+      <p>7. What animal is your beach spirit?</p>
+      <label><input type="radio" name="q7" value="calm"> 🐢 Sea turtle</label>
+      <label><input type="radio" name="q7" value="adventure"> 🐬 Dolphin</label>
+      <label><input type="radio" name="q7" value="glam"> 🐠 Tropical fish</label>
+      <label><input type="radio" name="q7" value="fun"> 🦀 Crab</label>
+    </div>
+
+    <div class="question">
+      <p>8. What's your beach packing style?</p>
+      <label><input type="radio" name="q8" value="calm"> 🧳 Full itinerary</label>
+      <label><input type="radio" name="q8" value="adventure"> 🎒 Backpack only</label>
+      <label><input type="radio" name="q8" value="glam"> 👝 Matching sets</label>
+      <label><input type="radio" name="q8" value="fun"> 🤷‍♀️ Last minute</label>
+    </div>
+
+    <div class="question">
+      <p>9. Choose a beach scent:</p>
+      <label><input type="radio" name="q9" value="glam"> 🌺 Plumeria</label>
+      <label><input type="radio" name="q9" value="adventure"> 🥭 Mango</label>
+      <label><input type="radio" name="q9" value="calm"> 🪵 Driftwood</label>
+      <label><input type="radio" name="q9" value="fun"> 🌊 Sea salt</label>
+    </div>
+
+    <div class="question">
+      <p>10. How do you recharge?</p>
+      <label><input type="radio" name="q10" value="calm"> 📚 Reading</label>
+      <label><input type="radio" name="q10" value="glam"> ✨ Journaling</label>
+      <label><input type="radio" name="q10" value="adventure"> 🏋️‍♀️ Moving</label>
+      <label><input type="radio" name="q10" value="fun"> 💃 Dancing</label>
+    </div>
+
+    <button type="submit">🌴 Show Me My Beach!</button>
+  </form>
+
+  <div id="result"></div>
+  <button id="retryBtn" style="display: none;">🔁 Try Again</button>
+
+  <script>
+    const beachMatch = {
+      calm: "Waikiki Beach, Hawaii 🌺",
+      adventure: "Navagio Beach, Greece 🏄‍♂️",
+      glam: "Laguna Beach, California ✨",
+      fun: "Clearwater Beach, Florida 🎉"
+    };
+
+    document.getElementById('quizForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const answers = [...document.querySelectorAll('input[type=radio]:checked')];
+  if (answers.length < 10) {
+    alert("Please answer all 10 questions! 🏖️");
+    return;
+  }
+
+  const tally = { calm: 0, adventure: 0, glam: 0, fun: 0 };
+  answers.forEach(a => tally[a.value]++);
+
+  const top = Object.entries(tally).sort((a, b) => b[1] - a[1])[0][0];
+  document.getElementById('result').innerHTML = `<h2>Your perfect beach is...</h2><p><strong>${beachMatch[top]}</strong></p>`;
+  
+  document.getElementById('retryBtn').style.display = 'inline-block';
+  
+  document.getElementById('retryBtn').addEventListener('click', function() {
+  document.getElementById('quizForm').reset();
+  document.getElementById('result').innerHTML = '';
+  this.style.display = 'none';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+});
+
+  </script>
+
+</body>
+</html>
